@@ -1,0 +1,20 @@
+---
+env:
+  PANTS_CONFIG_FILES: "['pants.toml', 'pants.ci.toml']"
+
+steps:
+  - label: ":lint-roller::bash: Lint Shell"
+    command:
+      - make lint-shell
+
+  - label: ":lint-roller::buildkite: Lint Plugin"
+    command:
+      - make lint-plugin
+
+  - label: ":bash: Unit Tests"
+    command:
+      - make test-shell
+
+  - label: ":buildkite: Plugin Tests"
+    command:
+      - make test-plugin

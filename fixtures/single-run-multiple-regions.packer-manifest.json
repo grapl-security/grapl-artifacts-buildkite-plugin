@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "name": "amazon-linux-2-amd64-ami",
+      "builder_type": "amazon-ebs",
+      "build_time": 1626818948,
+      "files": null,
+      "artifact_id": "us-east-1:ami-aaaaaaaaaaaaaaaaa,us-east-2:ami-bbbbbbbbbbbbbbbbb,us-west-1:ami-ccccccccccccccccc,us-west-2:ami-ddddddddddddddddd",
+      "packer_run_uuid": "f101f1dd-5fdb-bc9e-b0f0-ee49267bf567",
+      "custom_data": null
+    }
+  ],
+  "last_run_uuid": "f101f1dd-5fdb-bc9e-b0f0-ee49267bf567"
+}

@@ -1,0 +1,12 @@
+---
+name: Grapl Artifacts
+description: Common code for managing artifacts in Grapl CI/CD Pipelines
+author: https://github.com/grapl-security
+requirements: ["jq"]
+configuration:
+  properties:
+    action:
+      description: The specific action to execute
+      type: string
+      enum: ["convert_packer_manifests", "merge_artifact_files"]
+  additionalProperties: false

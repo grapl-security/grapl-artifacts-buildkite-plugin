@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+readonly action="${BUILDKITE_PLUGIN_GRAPL_ARTIFACTS_ACTION}"
+readonly valid_actions=(
+    convert_packer_manifests
+    merge_artifact_files
+)
+
+PATH=${PATH}:"$(dirname "${BASH_SOURCE[0]}")/../bin/"
+
+case "${action}" in
+    convert_packer_manifests)
+        convert_packer_manifests.sh
+        ;;
+    merge_artifact_files)
+        merge_artifact_files.sh
+        ;;
+    *)
+        echo "--- :confounded: Unrecognized action: '${action}'!"
+        echo "Please use one of the following: ${valid_actions[*]}"
+        exit 1
+        ;;
+esac
