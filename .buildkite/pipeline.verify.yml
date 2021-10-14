@@ -15,6 +15,7 @@ steps:
     command:
       - make test-shell
 
-  - label: ":buildkite: Plugin Tests"
-    command:
-      - make test-plugin
+  # TODO: Add plugin tests
+  # - label: ":buildkite: Plugin Tests"
+  #   command:
+  #     - make test-plugin
