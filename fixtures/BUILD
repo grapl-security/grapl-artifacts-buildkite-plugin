@@ -1,3 +1,1 @@
-resources(
-  sources=["*.json"]
-)
+resources(sources=["*.json"])
