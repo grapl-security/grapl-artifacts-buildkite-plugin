@@ -1,3 +1,5 @@
 {
-    "single-run-single-region.us-east-1": "ami-aaaaaaaaaaaaaaaaa"
+    "single-run-single-region": {
+        "us-east-1": "ami-aaaaaaaaaaaaaaaaa"
+    }
 }
