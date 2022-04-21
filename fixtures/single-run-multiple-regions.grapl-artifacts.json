@@ -1,6 +1,8 @@
 {
-  "single-run-multiple-regions.us-east-1": "ami-aaaaaaaaaaaaaaaaa",
-  "single-run-multiple-regions.us-east-2": "ami-bbbbbbbbbbbbbbbbb",
-  "single-run-multiple-regions.us-west-1": "ami-ccccccccccccccccc",
-  "single-run-multiple-regions.us-west-2": "ami-ddddddddddddddddd"
+    "single-run-multiple-regions": {
+        "us-east-1": "ami-aaaaaaaaaaaaaaaaa",
+        "us-east-2": "ami-bbbbbbbbbbbbbbbbb",
+        "us-west-1": "ami-ccccccccccccccccc",
+        "us-west-2": "ami-ddddddddddddddddd"
+    }
 }
