@@ -1,5 +1,12 @@
 DOCKER_COMPOSE_CHECK := docker compose run --rm
 
+.DEFAULT_GOAL=all
+
+.PHONY: all
+all: format
+all: lint
+all: test
+
 # Linting
 ########################################################################
 
@@ -28,17 +35,8 @@ format-shell:
 ########################################################################
 
 .PHONY: test
-test: test-plugin test-shell
-
-.PHONY: test-plugin
-test-plugin:
-	$(DOCKER_COMPOSE_CHECK) plugin-tester
+test: test-shell
 
 .PHONY: test-shell
 test-shell:
 	./pants test ::
-
-########################################################################
-
-.PHONY: all
-all: format lint test
