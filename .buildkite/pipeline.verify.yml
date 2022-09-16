@@ -29,8 +29,3 @@ steps:
       - grapl-security/vault-env#v0.1.0:
           secrets:
             - grapl-artifacts-buildkite-plugin/TOOLCHAIN_AUTH_TOKEN
-
-  # TODO: Add plugin tests
-  # - label: ":buildkite: Plugin Tests"
-  #   command:
-  #     - make test-plugin

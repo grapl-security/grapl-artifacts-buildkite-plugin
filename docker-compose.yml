@@ -1,14 +1,4 @@
 x-common-variables:
-  read-only-workdir: &read-only-workdir
-    type: bind
-    source: .
-    target: /workdir
-    read_only: true
-  read-write-workdir: &read-write-workdir
-    type: bind
-    source: .
-    target: /workdir
-    read_only: false
   read-only-plugin: &read-only-plugin
     # Buildkite containers assume you mount into /plugin
     type: bind
@@ -17,11 +7,6 @@ x-common-variables:
     read_only: true
 
 services:
-  plugin-tester:
-    image: buildkite/plugin-tester:v3.0.0
-    volumes:
-      - *read-only-plugin
-
   plugin-linter:
     image: buildkite/plugin-linter@sha256:833b1ce8326b038c748c8f04d317045205e115b1732a6842ec4a957f550fe357
     command: ["--id", "grapl-security/grapl-artifacts"]
